@@ -7,11 +7,10 @@ steps:
   image: plugins/docker
   settings:
     repo: chluehr/playwright
-    auto_tag: true
     tags:
       - latest
-      - '1.49-1'
-      - '1-1'
+      - '1.49-1.0.0'
+      - '1-1.0.0'
     username: 
         from_secret: docker_username
     password: 

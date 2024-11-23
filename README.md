@@ -29,6 +29,9 @@ The default entry point is a bash script that runs the following commands:
 Put your playwright tests in the `tests-e2e` directory, then
 run the tool.
 
+A pre-built docker image is available at
+https://hub.docker.com/repository/docker/chluehr/playwright/general
+
 Example:
 ```bash
 docker run -it --rm  \
@@ -40,7 +43,7 @@ docker run -it --rm  \
 	-e PROJECT_URL='https://example.com' \
 	-e BUILD_ID=$BUILD_ID \
 	-v $PWD/tests-e2e:/app/playwright/tests-e2e \
-	playwright
+	chluehr/playwright:latest
 ```
 
 The ```BUILD_ID``` is used as the revision number for the screenshots.
